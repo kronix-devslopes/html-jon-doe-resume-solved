@@ -101,7 +101,7 @@ test("the paragraph of text has at least 50 words", async ({ page }) => {
   expect(
     await paragraphTextLength.then((content) => {
       return cleanArrFromEmptyItems(content?.trim().split(" ")).length;
-    })
+    }),
   ).toBeGreaterThanOrEqual(50);
 });
 
